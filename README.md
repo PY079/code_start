@@ -1,7 +1,7 @@
 # Что нужно утсановить?
  1. ```pip install numpy```
  2. ```pip install opencv-python```
- 3. turtle,os,sys,math random уже установлены
+ 3. turtle, os, sys, math, random уже установлены
 ____
 # Что удалить в файлах
 Удалить все строки с
