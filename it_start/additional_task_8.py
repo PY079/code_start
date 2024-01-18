@@ -1,11 +1,10 @@
-import os, turtle as tr
+import os, turtle as tr, time
 from sqlalchemy import create_engine, Column, Integer, String, Table
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.future import create_engine
 
 path = fr'{os.path.dirname(__file__)}\database.db'
 
-# Создайте асинхронный движок SQLAlchemy
 engine = create_engine(f'sqlite:///{path}', echo=False)
 Base = declarative_base()
 Session = sessionmaker(bind=engine) 
@@ -60,15 +59,16 @@ def get_y():
 
 
 def turl(x,y):
-    obj=tr.Turtle()
     obj.speed(10)
+    obj.goto(int(x),int(y))
+    time.sleep(10)
+    obj.clear()
     obj.penup()
-    obj.goto(x)
+    obj.home()
     obj.pendown()
-    obj.goto(y)
 
 
-
+obj=tr.Turtle()
 while True:
     print('1. Изменить X\n2. Изменить Y\n0. Выйти')
     inp=int(input('Введи номер.. '))
@@ -85,6 +85,7 @@ while True:
     y=get_y()
     print(f'В бд --- x: {x}, y:{y}')
     turl(x,y)
+
 
 
     
