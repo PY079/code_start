@@ -1,3 +1,4 @@
+
 class Person:
     def __init__(self, name:str, age:int ,job=None):
         self.name=name
@@ -13,4 +14,5 @@ people1=Person('Игорь',20,'dev')
 people2=Person('Алина',15)
 print(people1.get_info)
 print(people2.get_info)
+
 
