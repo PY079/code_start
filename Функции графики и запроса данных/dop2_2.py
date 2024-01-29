@@ -14,6 +14,6 @@ def input_movement(movement:str):
 
 while True:
     print('Команды: пр-прямо, наз-назад, вл-влево, вп-вправо, выход - press enter\nПример: вп 50\n\n')
-    a=input('Р’РІРµРґРёС‚Рµ: ')
+    a=input('Введите: ')
     os.system('cls')
     input_movement(a)
