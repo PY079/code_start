@@ -9,11 +9,11 @@ def input_movement(movement:str):
         if movement_list[0]=='пр': obj.forward(int(movement_list[1]))
         elif movement_list[0]=='наз': obj.backward(int(movement_list[1]))
         elif movement_list[0]=='вл': obj.left(int(movement_list[1]))
-        elif movement_list[0]=='РІРї': obj.right(int(movement_list[1]))
+        elif movement_list[0]=='вп': obj.right(int(movement_list[1]))
         else: exit()
 
 while True:
-    print('РљРѕРјР°РЅРґС‹: РїСЂ-РїСЂСЏРјРѕ, РЅР°Р·-РЅР°Р·Р°Рґ, РІР»-РІР»РµРІРѕ, РІРї-РІРїСЂР°РІРѕ, РІС‹С…РѕРґ - press enter\nРџСЂРёРјРµСЂ: РІРї 50\n\n')
+    print('Команды: пр-прямо, наз-назад, вл-влево, вп-вправо, выход - press enter\nПример: вп 50\n\n')
     a=input('Р’РІРµРґРёС‚Рµ: ')
     os.system('cls')
     input_movement(a)
